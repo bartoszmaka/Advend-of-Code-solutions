@@ -1,4 +1,6 @@
 from hashlib import md5
+# 254575
+# 1038736
 
 
 def make_hash(number, secret_key='bgvyzdsv'):
@@ -7,7 +9,8 @@ def make_hash(number, secret_key='bgvyzdsv'):
 
 
 def hash_good(my_hash):
-    if my_hash.hexdigest()[:5] == '00000':
+    # if my_hash.hexdigest()[:5] == '00000':
+    if my_hash.hexdigest()[:6] == '000000':
         return True
     else:
         return False
