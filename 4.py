@@ -1,0 +1,21 @@
+from hashlib import md5
+
+
+def make_hash(number, secret_key='bgvyzdsv'):
+    foo = secret_key + str(number)
+    return md5(bytes(foo, encoding='utf-8'))
+
+
+def hash_good(my_hash):
+    if my_hash.hexdigest()[:5] == '00000':
+        return True
+    else:
+        return False
+
+i = 1
+while True:
+    if hash_good(make_hash(i)):
+        print(i)
+        break
+    else:
+        i += 1
