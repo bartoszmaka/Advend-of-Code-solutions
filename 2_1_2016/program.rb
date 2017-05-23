@@ -1,4 +1,4 @@
-require './lib/solution'
+require './solution/solution'
 # require 'solution'
 
 foo = InputReader.new
